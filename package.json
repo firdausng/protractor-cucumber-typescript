@@ -1,0 +1,30 @@
+{
+  "name": "try001-pro-ts-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "protractor dist/cucumber.conf.js",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start",
+    "cucumber": "tsc && protractor dist/cucumber.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cucumber": "^2.0.1",
+    "@types/node": "^7.0.13",
+    "@types/selenium-webdriver": "^3.0.2",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "cucumber": "^2.0.0-rc.9",
+    "cucumber-html-reporter": "^0.4.0",
+    "mkdirp": "^0.5.1",
+    "protractor": "^5.1.1",
+    "protractor-cucumber-framework": "^3.1.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}
