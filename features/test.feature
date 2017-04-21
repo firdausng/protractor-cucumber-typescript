@@ -1,6 +1,8 @@
-Feature: To go to honeycomb page
+Feature: To go to protractor page
 
 @CucumberScenario
-Scenario: honeycomb landing page
-Given I am on honeycomb page
+Scenario: protractor landing page
+Given I am on protractor page
+When I click "View on GitHub" button
+Then I will arrive at "protractor github" page 
 
