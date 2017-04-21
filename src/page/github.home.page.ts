@@ -1,15 +1,15 @@
 import { $, by, element, browser, until } from "protractor";
 import { Base } from "./base.page"
 
-export class Landing extends Base {
+export class LandingPage extends Base {
 
     constructor() {
         super();
     }
 
     data = {
-        url: "https://initiative-honeycomb-qa.mbww.com/",
-        pageTitle: "HoneycoMB Login"
+        url: "https://github.com/",
+        pageTitle: "The world's leading software development platform · GitHub"
     }
 
     async navigate() {
@@ -29,7 +29,7 @@ export class Landing extends Base {
 
 
 const selector = {
-    "ONEPASS LOGIN": {
+    "Sign in": {
         type: "xpath",
         value: text => `//*[contains(text(),'${text}')]`
     }

@@ -1,7 +1,5 @@
-import { Landing } from "./honey.home.page";
-import { OnePass } from "./onepass.login.page";
+import { LandingPage } from "./github.home.page";
+import { LoginPage } from "./github.login.page";
 
-export const PAGES = [
-    Landing,
-    OnePass
-];
+export const landingPage: LandingPage = new LandingPage();
+export const loginPage: LoginPage = new LoginPage();

@@ -28,7 +28,7 @@ export let config: Config = {
         strict: true,
         format: ['pretty'],
         require: ['../src/stepdefinitions/*.ts', '../src/support.ts'],
-        tags: '@HoneycombScenario'
+        tags: '@GithubScenario'
         // tags: '@HoneycombScenario or @CucumberScenario or @ProtractorScenario'
     }
 };
