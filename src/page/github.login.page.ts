@@ -5,6 +5,7 @@ export class LoginPage extends Base {
 
     constructor() {
         super();
+        
     }
 
     data = {

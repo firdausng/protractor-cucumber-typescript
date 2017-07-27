@@ -1,4 +1,4 @@
-import { $, by, element, browser } from "protractor";
+import { $, by, element, browser, until } from "protractor";
 import { Base } from "./base.page"
 
 export class Home extends Base {
@@ -8,6 +8,16 @@ export class Home extends Base {
 
     constructor() {
         super();
+    }
+
+    data = {
+        url: "http://www.protractortest.org",
+        pageTitle: "Protractor - end-to-end testing for AngularJSb"
+    }
+
+    async navigate() {
+        await this.go(this.data.url);
+        return browser.wait(until.titleIs(this.data.pageTitle), 5000)
     }
 
     async clickAction(action) {
