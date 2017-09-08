@@ -1,36 +1,34 @@
 import { $, by, element, browser, until } from "protractor";
 import { Base } from "./base.page"
+import { IGroupSelector } from "../model/ui.model";
 
 export class LandingPage extends Base {
 
-    constructor() {
-        super();
-    }
-
-    data = {
+    static data = {
         url: "https://github.com/",
         pageTitle: "The world's leading software development platform · GitHub"
     }
 
-    async navigate() {
+    static async navigate() {
         await this.go(this.data.url);
         return browser.wait(until.titleIs(this.data.pageTitle), 5000)
     }
 
-    clickBtn(text) {
-        if(typeof selector[text].value === "function"){
-            selector[text].value = selector[text].value(text)
-        }
-        // return element(by.xpath(`//*[contains(text(),'${text}')]`)).click();
-        return element(this.chooseSelector(selector[text])).click();
+    static clickBtn(text: string) {
+        console.log("haha" + JSON.stringify(selector[text]))
+        return element(this.chooseSelector(text, selector[text])).click();
     }
 }
 
 
 
-const selector = {
+const selector: IGroupSelector = {
     "Sign in": {
         type: "xpath",
         value: text => `//*[contains(text(),'${text}')]`
+    },
+    "Sign Out": {
+        type: "xpath",
+        value: `//*[contains(text(),'logout')]`
     }
 }

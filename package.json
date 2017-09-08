@@ -1,5 +1,5 @@
 {
-  "name": "try001-pro-ts-cucumber",
+  "name": "protractor-ts-cucumber",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
     "test": "protractor dist/cucumber.conf.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
+    "webdriver-stop": "webdriver-manager stop",
     "cucumber": "tsc && protractor dist/cucumber.conf.js"
   },
   "keywords": [],

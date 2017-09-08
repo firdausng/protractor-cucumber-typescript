@@ -6,10 +6,6 @@ export class Home extends Base {
     githubPageTitle: string = "GitHub - angular/protractor: E2E test framework for Angular apps";
     githubBtn: string = "View on GitHub"
 
-    constructor() {
-        super();
-    }
-
     async clickAction(action) {
         let result;
         if (action === "View on GitHub") {

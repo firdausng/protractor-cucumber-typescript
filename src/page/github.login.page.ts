@@ -3,11 +3,7 @@ import { Base } from "./base.page"
 
 export class LoginPage extends Base {
 
-    constructor() {
-        super();
-    }
-
-    data = {
+    static data = {
         pageTitle: "Sign in to GitHub · GitHub"
     }
 

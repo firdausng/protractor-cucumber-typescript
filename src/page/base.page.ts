@@ -1,36 +1,45 @@
 import { $, by, element, browser } from "protractor";
+import { ISelector, ISelectorString } from "../model/ui.model";
 
 
 export class Base {
 
-
-    constructor() {
-
-    }
-
-    go(url){
+    static go(url) {
         return browser.get(url);
     }
 
-    chooseSelector(obj){
-        switch (obj.type) {
+    static getSelectorValue(text, selector: ISelector): ISelectorString {
+        let tempSelector = selector;
+        if (typeof selector.value === "function") {
+            tempSelector.value = selector.value(text)
+            return <ISelectorString>tempSelector;
+        } else {
+            return <ISelectorString>tempSelector;
+        }
+    }
+
+    static chooseSelector(text: string, selectors:ISelector) {
+        let selector: ISelectorString = this.getSelectorValue(text, selectors)
+        switch (selector.type) {
             case "xpath":
-                return by.xpath(obj.value);
+                return by.xpath(selector.value);
             case "className":
-                return by.className(obj.value);
+                return by.className(selector.value);
             case "id":
-                return by.id(obj.value);
+                return by.id(selector.value);
             case "js":
-                return by.js(obj.value);
+                return by.js(selector.value);
             case "linkText":
-                return by.className(obj.value);
+                return by.linkText(selector.value);
             case "name":
-                return by.name(obj.value);
+                return by.name(selector.value);
             case "partialLinkText":
-                return by.partialLinkText(obj.value);
+                return by.partialLinkText(selector.value);
             case "className":
-                return by.className(obj.value);
-            
+                return by.className(selector.value);
+            case "css":
+            by
+                return by.css(selector.value);
             default:
                 break;
         }

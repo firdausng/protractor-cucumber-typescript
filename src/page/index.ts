@@ -1,5 +1,10 @@
-import { LandingPage } from "./github.home.page";
-import { LoginPage } from "./github.login.page";
+import { LoginPage } from './github.login.page';
+import { Home } from './home.page';
+import { LandingPage } from './github.home.page';
 
-export const landingPage: LandingPage = new LandingPage();
-export const loginPage: LoginPage = new LoginPage();
+export {
+    LandingPage,
+    Home,
+    LoginPage
+    
+}
