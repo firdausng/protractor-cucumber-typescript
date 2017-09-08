@@ -1,4 +1,4 @@
-import { $, by, element, browser } from "protractor";
+import { $, by, element, browser, until } from "protractor";
 import { Base } from "./base.page"
 
 export class Home extends Base {
@@ -6,6 +6,23 @@ export class Home extends Base {
     githubPageTitle: string = "GitHub - angular/protractor: E2E test framework for Angular apps";
     githubBtn: string = "View on GitHub"
 
+<<<<<<< HEAD
+=======
+    constructor() {
+        super();
+    }
+
+    data = {
+        url: "http://www.protractortest.org",
+        pageTitle: "Protractor - end-to-end testing for AngularJSb"
+    }
+
+    async navigate() {
+        await this.go(this.data.url);
+        return browser.wait(until.titleIs(this.data.pageTitle), 5000)
+    }
+
+>>>>>>> d5a790e8290fa12bf790503c164ad6a88f0a0f4d
     async clickAction(action) {
         let result;
         if (action === "View on GitHub") {

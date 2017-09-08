@@ -28,6 +28,11 @@ export let config: Config = {
         strict: true,
         format: ['pretty'],
         require: ['../src/stepdefinitions/*.ts', '../src/support.ts'],
+<<<<<<< HEAD
         tags: '@GithubScenario'
+=======
+        tags: '@GithubScenario or @GoogleScenario'
+        // tags: '@HoneycombScenario or @CucumberScenario or @ProtractorScenario'
+>>>>>>> d5a790e8290fa12bf790503c164ad6a88f0a0f4d
     }
 };
