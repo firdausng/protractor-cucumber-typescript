@@ -15,7 +15,6 @@ export class LandingPage extends Base {
     }
 
     static clickBtn(text: string) {
-        console.log("haha" + JSON.stringify(selector[text]))
         return element(this.chooseSelector(text, selector[text])).click();
     }
 }
